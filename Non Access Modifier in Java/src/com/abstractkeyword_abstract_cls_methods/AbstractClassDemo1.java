@@ -29,9 +29,15 @@ public class AbstractClassDemo1
 {
 	public static void main(String[] args) {
 		
-		Honda cls = new Honda();
+		/*Honda cls = new Honda();
 		cls.speed();
-		cls.model();
+		cls.model();*/
+		
+		//use any one way
+		
+		Bike bike = new Honda();
+		bike.speed();
+		bike.model();
 	}
 
 }

@@ -1,42 +1,63 @@
 package com.abstractkeyword_abstract_cls_methods;
 
-abstract class Dress
+public class AbstractClassDemo5
 {
-	abstract void jeans();
-	
-	public void shirts()
-	{
-		System.out.println("print the shirts..");
-	}
-	
-	abstract void shoes(String abc);
-}
-
-
-class Jeans extends Dress
-{
-	@Override
-	public void jeans()
-	{
-		System.out.println("jeans...................");
-	}
-	@Override
-	public void shoes(String arg)
-	{
-		System.out.println("shoes..................."+ arg);
-	}
-}
-
-
-
-public class AbstractClassDemo5 
-{
-
 	public static void main(String[] args) 
 	{
-		Dress dress = new Jeans();
-		dress.jeans();
-		dress.shoes("NIKE");
-		dress.shirts();
+		
+	
+		Nokiaphone cls = new Iphone();
+		cls.call();
+		cls.camera();
+		cls.move();
+		cls.UI();
+		
+	}
+
+}
+
+
+abstract class Nokiaphone
+{
+	public void call() 
+	{
+		System.out.println("Nokia Phone able to call to others");
+	}
+	public abstract void camera();
+	public abstract void move();
+	public abstract void UI();
+}
+
+abstract class Androidphone extends Nokiaphone
+
+{
+	/*public void call() 
+	{
+		System.out.println("Android Phone able to call to others");
+	}*/
+	
+	public void camera()
+	{
+		System.out.println("Android Phone able to take picture");
+	}
+	
+	public void move()
+	{
+		System.out.println("Android Phone able to Move");
+	}
+}
+
+
+class Iphone extends Androidphone
+{
+	/*public void camera()
+	{
+	
+		System.out.println(" IPhone able to call to others");
+	}*/
+	
+	public void UI()
+	{
+		System.out.println("IPhone easy to access by using UI");
 	}
 }

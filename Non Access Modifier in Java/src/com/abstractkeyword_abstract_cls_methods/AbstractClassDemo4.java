@@ -1,57 +1,42 @@
 package com.abstractkeyword_abstract_cls_methods;
 
-
-abstract class Bikes
+abstract class Dress
+{
+	abstract void jeans();
+	
+	public void shirts()
 	{
-		abstract void mileage();
-		abstract void speed();
+		System.out.println("print the shirts..");
 	}
 	
-	
-	class R15 extends Bikes
-	{
-		@Override
-		void mileage()
-		{
-		
-			System.out.println("R15 milegae per meter : 40 kms ");
-		}
-		
-		@Override
-		void speed()
-		{
-			System.out.println("R15 speed per sec : 50+ kmps");
-			
-		}
-	}
+	abstract void shoes(String abc);
+}
 
 
-	class KTM extends Bikes
+class Jeans extends Dress
+{
+	@Override
+	public void jeans()
 	{
-		@Override
-		void mileage()
-		{
-			System.out.println("KTM milegae per meter : 40 kms ");
-		}
-		
-		@Override
-		void speed()
-		{
-			System.out.println("KTM speed per sec : 40+ kmps ");
-		}
+		System.out.println("jeans...................");
 	}
+	@Override
+	public void shoes(String arg)
+	{
+		System.out.println("shoes..................."+ arg);
+	}
+}
 
 
 
 public class AbstractClassDemo4 
 {
+
 	public static void main(String[] args) 
 	{
-		Bikes cls1 = new KTM();
-		cls1.mileage();
-		cls1.speed();
-		Bikes cls2 = new R15();
-		cls2.mileage();
-		cls2.speed();
+		Dress dress = new Jeans();
+		dress.jeans();
+		dress.shoes("NIKE");
+		dress.shirts();
 	}
 }
